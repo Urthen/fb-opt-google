@@ -1,5 +1,3 @@
 # fb-opt-google
 
-Author: 
-
-A lovely Fritbot module.
+Fritbot Google Searching module
