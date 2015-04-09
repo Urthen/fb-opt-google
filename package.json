@@ -1,0 +1,28 @@
+{
+  "name": "fb-opt-google",
+  "version": "0.0.1",
+  "description": "A lovely Fritbot module",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/urthen/fb-opt-google.git"
+  },
+  "dependencies": {
+    "request": ""
+    },
+  "devDependencies": {
+    "grunt": "",
+    "grunt-push-release": "",
+    "grunt-contrib-jshint": "",
+    "grunt-jscs": ""
+  },
+  "keywords": [
+    "fritbot",
+    "fritbot-module"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urthen/fb-opt-google/issues"
+  },
+  "homepage": "https://github.com/urthen/fb-opt-google"
+}
