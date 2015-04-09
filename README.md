@@ -1,3 +1,3 @@
 # fb-opt-google
 
-Fritbot Google Searching module
+[Fritbot](https://github.com/Urthen/fritbot) Google Searching module

@@ -8,10 +8,10 @@ module.exports = function (grunt) {
             options : {
                 jshintrc : '.jshintrc'
             },
-            src : [ 'gruntfile.js', 'src/**/*.js' ]
+            src : [ 'src/**/*.js', '*.js']
         },
         jscs : {
-            src : 'src/**/*.js'
+            src : ['src/**/*.js', '*.js']
         },
         bump : {
             npm : true

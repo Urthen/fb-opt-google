@@ -1,0 +1,4 @@
+google_more_results: |+
+  %s
+  For more results, see %s
+google_no_results: "Sorry, Google doesn't seem to know anything about that."

@@ -1,6 +1,9 @@
 var querystring = require('querystring'),
+    Entities = require('html-entities').AllHtmlEntities,
     request = require('request'),
     util = require('util');
+
+var entities = new Entities();
 
 function googleSearch(route, args) {
     var more = args[0] === 'more',
@@ -18,18 +21,17 @@ function googleSearch(route, args) {
 
         if (data.results) {
             if (more) {
-                var msg = '\n';
+                var msg = '';
 
                 for (var i = 0; i < data.results.length; i++) {
-                    msg += util.format('%d: %s - %s\n', i + 1, data.results[i].titleNoFormatting, data.results[i].url);
+                    msg += util.format('\n%d: %s - %s', i + 1, entities.decode(data.results[i].titleNoFormatting), data.results[i].url);
                 }
-                msg += 'For more results, see ' + data.cursor.moreResultsUrl;
-                route.send(msg);
+                route.send('?google_more_results', msg, data.cursor.moreResultsUrl);
             } else {
-                route.send(data.results[0].titleNoFormatting + ' - ' + data.results[0].url);
+                route.send(entities.decode(data.results[0].titleNoFormatting) + ' - ' + data.results[0].url);
             }
         } else {
-            route.send('Sorry, Google doesn\'t seem to know anything about that.');
+            route.send('?google_no_results');
         }
     }.bind(this));
 }
