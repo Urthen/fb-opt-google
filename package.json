@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "request": "",
-    "html-entities": ""
+    "html-entities": "",
+    "lodash": ""
     },
   "devDependencies": {
     "grunt": "",
